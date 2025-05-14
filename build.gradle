@@ -93,10 +93,32 @@ repositories {
 			includeGroup("dev.architectury")
 		}
 	}
+
+	maven {
+		url "https://maven.saps.dev/minecraft"
+		content {
+			includeGroup "com.shynieke.geore"
+		}
+	}
+
+	maven {
+		url "https://cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
 }
 
 dependencies {
 	implementation "dev.ftb.mods:ftb-library-neoforge:${ftb_library_version}"
+
+	compileOnly("com.shynieke.geore:GeOre-${geore_minecraft}:${geore_version}")
+	localRuntime("com.shynieke.geore:GeOre-${geore_minecraft}:${geore_version}")
+
+	compileOnly "curse.maven:applied-energistics-2-223794:6488853"
+	localRuntime "curse.maven:applied-energistics-2-223794:6488853"
+	compileOnly "curse.maven:guideme-1173950:6488254"
+	localRuntime "curse.maven:guideme-1173950:6488254"
 }
 
 tasks.register("sourcesJar", Jar) {

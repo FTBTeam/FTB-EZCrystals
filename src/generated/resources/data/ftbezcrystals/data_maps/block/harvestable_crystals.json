@@ -1,0 +1,181 @@
+{
+  "values": {
+    "ae2:quartz_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "ae2"
+        }
+      ],
+      "bud": "ae2:small_quartz_bud",
+      "budding_block": [
+        "ae2:chipped_budding_quartz",
+        "ae2:damaged_budding_quartz",
+        "ae2:flawed_budding_quartz",
+        "ae2:flawless_budding_quartz"
+      ]
+    },
+    "geore:coal_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_coal_bud",
+      "budding_block": [
+        "geore:budding_coal"
+      ]
+    },
+    "geore:copper_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_copper_bud",
+      "budding_block": [
+        "geore:budding_copper"
+      ]
+    },
+    "geore:diamond_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_diamond_bud",
+      "budding_block": [
+        "geore:budding_diamond"
+      ]
+    },
+    "geore:emerald_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_emerald_bud",
+      "budding_block": [
+        "geore:budding_emerald"
+      ]
+    },
+    "geore:gold_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_gold_bud",
+      "budding_block": [
+        "geore:budding_gold"
+      ]
+    },
+    "geore:iron_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_iron_bud",
+      "budding_block": [
+        "geore:budding_iron"
+      ]
+    },
+    "geore:lapis_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_lapis_bud",
+      "budding_block": [
+        "geore:budding_lapis"
+      ]
+    },
+    "geore:quartz_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_quartz_bud",
+      "budding_block": [
+        "geore:budding_quartz"
+      ]
+    },
+    "geore:redstone_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_redstone_bud",
+      "budding_block": [
+        "geore:budding_redstone"
+      ]
+    },
+    "geore:ruby_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_ruby_bud",
+      "budding_block": [
+        "geore:budding_ruby"
+      ]
+    },
+    "geore:sapphire_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_sapphire_bud",
+      "budding_block": [
+        "geore:budding_sapphire"
+      ]
+    },
+    "geore:topaz_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_topaz_bud",
+      "budding_block": [
+        "geore:budding_topaz"
+      ]
+    },
+    "geore:zinc_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_zinc_bud",
+      "budding_block": [
+        "geore:budding_zinc"
+      ]
+    },
+    "minecraft:amethyst_cluster": {
+      "bud": "minecraft:small_amethyst_bud",
+      "budding_block": [
+        "minecraft:budding_amethyst"
+      ]
+    }
+  }
+}

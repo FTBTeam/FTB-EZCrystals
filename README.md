@@ -1,4 +1,4 @@
-# FTB (Mod Name)
+# FTB EZ Crystals
 
 Use https://github.com/FTBTeam/FTB-Mods-Issues for any mod issues
 

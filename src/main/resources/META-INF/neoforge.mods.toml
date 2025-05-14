@@ -6,11 +6,11 @@ license = "All Rights Reserved"
 modId = "${mod_id}"
 version = "${version}"
 displayName = "${mod_name}"
-displayURL = "https://www.curseforge.com/minecraft/mc-mods/ftb-mod-name"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/ftb-ez-crystals"
 #logoFile = "logo.png"
-authors = "FTB Team"
+authors = "Mrbysco, FTB Team"
 description = '''
-Description
+FTB Ez Crystals is a lightweight quality-of-life mod that allows players to right-click budding amethyst blocks to instantly harvest a full amethyst cluster without breaking the block or waiting for growth stages. Designed for seamless integration and automation support, this mod simplifies crystal farming mechanics with minimal performance impact.
 '''
 
 [[dependencies.${mod_id}]]
