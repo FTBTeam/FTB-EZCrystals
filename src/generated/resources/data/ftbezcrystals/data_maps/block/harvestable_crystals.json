@@ -15,6 +15,42 @@
         "ae2:flawless_budding_quartz"
       ]
     },
+    "geore:aluminum_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_aluminum_bud",
+      "budding_block": [
+        "geore:budding_aluminum"
+      ]
+    },
+    "geore:ancient_debris_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_ancient_debris_bud",
+      "budding_block": [
+        "geore:budding_ancient_debris"
+      ]
+    },
+    "geore:black_quartz_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_black_quartz_bud",
+      "budding_block": [
+        "geore:budding_black_quartz"
+      ]
+    },
     "geore:coal_cluster": {
       "neoforge:conditions": [
         {
@@ -99,6 +135,66 @@
         "geore:budding_lapis"
       ]
     },
+    "geore:lead_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_lead_bud",
+      "budding_block": [
+        "geore:budding_lead"
+      ]
+    },
+    "geore:monazite_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_monazite_bud",
+      "budding_block": [
+        "geore:budding_monazite"
+      ]
+    },
+    "geore:nickel_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_nickel_bud",
+      "budding_block": [
+        "geore:budding_nickel"
+      ]
+    },
+    "geore:osmium_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_osmium_bud",
+      "budding_block": [
+        "geore:budding_osmium"
+      ]
+    },
+    "geore:platinum_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_platinum_bud",
+      "budding_block": [
+        "geore:budding_platinum"
+      ]
+    },
     "geore:quartz_cluster": {
       "neoforge:conditions": [
         {
@@ -147,6 +243,30 @@
         "geore:budding_sapphire"
       ]
     },
+    "geore:silver_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_silver_bud",
+      "budding_block": [
+        "geore:budding_silver"
+      ]
+    },
+    "geore:tin_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_tin_bud",
+      "budding_block": [
+        "geore:budding_tin"
+      ]
+    },
     "geore:topaz_cluster": {
       "neoforge:conditions": [
         {
@@ -157,6 +277,42 @@
       "bud": "geore:small_topaz_bud",
       "budding_block": [
         "geore:budding_topaz"
+      ]
+    },
+    "geore:tungsten_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_tungsten_bud",
+      "budding_block": [
+        "geore:budding_tungsten"
+      ]
+    },
+    "geore:uraninite_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_uraninite_bud",
+      "budding_block": [
+        "geore:budding_uraninite"
+      ]
+    },
+    "geore:uranium_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_uranium_bud",
+      "budding_block": [
+        "geore:budding_uranium"
       ]
     },
     "geore:zinc_cluster": {

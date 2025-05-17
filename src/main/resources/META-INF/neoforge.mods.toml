@@ -13,7 +13,7 @@ description = '''
 FTB Ez Crystals is a lightweight quality-of-life mod that allows players to right-click budding amethyst blocks to instantly harvest a full amethyst cluster without breaking the block or waiting for growth stages. Designed for seamless integration and automation support, this mod simplifies crystal farming mechanics with minimal performance impact.
 '''
 
-[[dependencies.${mod_id}]]
+[[dependencies."${mod_id}"]]
 modId = "neoforge"
 mandatory = true
 versionRange = "${mod_loader_range}"

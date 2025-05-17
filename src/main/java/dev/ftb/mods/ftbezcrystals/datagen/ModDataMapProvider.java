@@ -36,20 +36,9 @@ public class ModDataMapProvider extends DataMapProvider {
     }
 
     private void addGeOres(Builder<HarvestableCrystal, Block> crystals) {
-
-        addGeOre(crystals, GeOreRegistry.COAL_GEORE);
-        addGeOre(crystals, GeOreRegistry.COPPER_GEORE);
-        addGeOre(crystals, GeOreRegistry.DIAMOND_GEORE);
-        addGeOre(crystals, GeOreRegistry.EMERALD_GEORE);
-        addGeOre(crystals, GeOreRegistry.GOLD_GEORE);
-        addGeOre(crystals, GeOreRegistry.IRON_GEORE);
-        addGeOre(crystals, GeOreRegistry.LAPIS_GEORE);
-        addGeOre(crystals, GeOreRegistry.QUARTZ_GEORE);
-        addGeOre(crystals, GeOreRegistry.REDSTONE_GEORE);
-        addGeOre(crystals, GeOreRegistry.RUBY_GEORE);
-        addGeOre(crystals, GeOreRegistry.SAPPHIRE_GEORE);
-        addGeOre(crystals, GeOreRegistry.TOPAZ_GEORE);
-        addGeOre(crystals, GeOreRegistry.ZINC_GEORE);
+        for (GeOreBlockReg reg : GeOreRegistry.getGeOres()) {
+            addGeOre(crystals, reg);
+        }
     }
 
     private void addGeOre(Builder<HarvestableCrystal, Block> crystals, GeOreBlockReg reg) {
