@@ -4,8 +4,6 @@ Simplify your crystal harvesting.
 
 FTB Ez Crystals lets you right-click to harvest fully grown budding crystals without breaking the block. After harvesting, the crystal resets to its first growth stage.
 
-![Example of how it works](https://cdn.feed-the-beast.com/mods/ftb-ez-crystals/example.gif)
-
 ### Key Features
 
 *   Right-click harvesting of fully grown budding crystals.,
