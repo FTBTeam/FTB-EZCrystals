@@ -4,15 +4,14 @@ import dev.ftb.mods.ftbezcrystals.FTBEZCrystals;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = FTBEZCrystals.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = FTBEZCrystals.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EZDataGen {
-
     @SubscribeEvent
     public static void dataGenEvent(GatherDataEvent event) {
         DataGenerator gen = event.getGenerator();
@@ -20,7 +19,7 @@ public class EZDataGen {
         CompletableFuture<Provider> lookupProvider = event.getLookupProvider();
 
         if (event.includeServer()) {
-            gen.addProvider(true, new ModDataMapProvider(output, lookupProvider));
+            gen.addProvider(true, new EZCrystalsDataProvider(output, lookupProvider));
         }
     }
 }
