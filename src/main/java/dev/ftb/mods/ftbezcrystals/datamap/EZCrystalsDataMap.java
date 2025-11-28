@@ -47,13 +47,18 @@ public enum EZCrystalsDataMap {
             INSTANCE.clear();
 
             map.values().forEach(json -> json.getAsJsonObject().entrySet().forEach(entry -> {
-               ResourceLocation blockId = ResourceLocation.tryParse(entry.getKey());
-               if (blockId != null && ForgeRegistries.BLOCKS.containsKey(blockId)) {
-                   HarvestableCrystal.fromJson(entry.getValue(), registryAccess)
-                           .ifPresent(rec -> INSTANCE.add(blockId, rec));
-               } else {
-                   FTBEZCrystals.LOGGER.error("ignoring unknown block '{}'", entry.getKey());
-               }
+                ResourceLocation blockId = ResourceLocation.tryParse(entry.getKey());
+                if (blockId != null) {
+                    if (ForgeRegistries.BLOCKS.containsKey(blockId)) {
+                        HarvestableCrystal.fromJson(entry.getValue(), registryAccess).ifPresent(
+                                rec -> INSTANCE.add(blockId, rec)
+                        );
+                    } else {
+                        FTBEZCrystals.LOGGER.warn("ignoring unknown block ID '{}'", entry.getKey());
+                    }
+                } else {
+                    FTBEZCrystals.LOGGER.error("ignoring malformed block ID '{}'", entry.getKey());
+                }
             }));
         }
     }
