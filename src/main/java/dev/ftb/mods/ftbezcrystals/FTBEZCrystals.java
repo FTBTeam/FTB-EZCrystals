@@ -37,7 +37,7 @@ public class FTBEZCrystals {
     }
 
     private void clusterInteract(PlayerInteractEvent.RightClickBlock event) {
-        if (event.getHand() == InteractionHand.OFF_HAND)
+        if (event.getHand() == InteractionHand.OFF_HAND || event.getEntity().isCrouching())
             return;
 
         if (harvestCrystal(event.getLevel(), event.getPos(), event.getItemStack(), event.getEntity())) {
