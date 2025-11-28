@@ -40,10 +40,12 @@ public class FTBEZCrystals {
         if (event.getHand() == InteractionHand.OFF_HAND)
             return;
 
-        harvestCrystal(event.getLevel(), event.getPos(), event.getItemStack(), event.getEntity());
+        if (harvestCrystal(event.getLevel(), event.getPos(), event.getItemStack(), event.getEntity())) {
+            event.setCanceled(true);
+        }
     }
 
-    public static void harvestCrystal(Level level, BlockPos pos, ItemStack heldStack, Player player) {
+    public static boolean harvestCrystal(Level level, BlockPos pos, ItemStack heldStack, Player player) {
         BlockState state = level.getBlockState(pos);
         Block block = state.getBlock();
         HarvestableCrystal harvestableCrystal = EZCrystalsDataMap.INSTANCE.get(block);
@@ -65,8 +67,11 @@ public class FTBEZCrystals {
                 level.setBlock(pos, budState, Block.UPDATE_ALL);
                 spawnParticles(level, pos, 10, 1.0, 1.0, true, ParticleTypes.HAPPY_VILLAGER);
                 player.swing(InteractionHand.MAIN_HAND, true);
+
+                return true;
             }
         }
+        return false;
     }
 
     private void registerReloadListeners(AddReloadListenerEvent event) {
