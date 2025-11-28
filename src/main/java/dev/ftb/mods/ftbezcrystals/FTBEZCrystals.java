@@ -37,14 +37,16 @@ public class FTBEZCrystals {
     }
 
     private void clusterInteract(PlayerInteractEvent.RightClickBlock event) {
-        if (event.getHand() == InteractionHand.OFF_HAND)
+        if (event.getHand() == InteractionHand.OFF_HAND || event.getEntity().isCrouching())
             return;
 
-        harvestCrystal(event.getLevel(), event.getPos(), event.getItemStack(), event.getEntity());
+        if (harvestCrystal(event.getLevel(), event.getPos(), event.getItemStack(), event.getEntity())) {
+            event.setCanceled(true);
+        }
     }
 
     @SuppressWarnings("deprecation")
-    public static void harvestCrystal(Level level, BlockPos pos, ItemStack heldStack, Player player) {
+    public static boolean harvestCrystal(Level level, BlockPos pos, ItemStack heldStack, Player player) {
         BlockState state = level.getBlockState(pos);
         Block block = state.getBlock();
 
@@ -53,23 +55,24 @@ public class FTBEZCrystals {
             Direction direction = state.getValue(BlockStateProperties.FACING);
             BlockState attachedState = level.getBlockState(pos.relative(direction.getOpposite()));
 
-            boolean onBudding = harvestableCrystal.buddingBlocks().stream().anyMatch(attachedState::is);
-            if (!onBudding)
-                return;
+            if (harvestableCrystal.buddingBlocks().stream().anyMatch(attachedState::is)) {
+                BlockState budState = harvestableCrystal.bud().defaultBlockState();
+                budState = budState.setValue(BlockStateProperties.FACING, state.getValue(BlockStateProperties.FACING));
+                Block.dropResources(state, level, pos, null, player, heldStack);
 
-            BlockState budState = harvestableCrystal.bud().defaultBlockState();
-            budState = budState.setValue(BlockStateProperties.FACING, state.getValue(BlockStateProperties.FACING));
-            Block.dropResources(state, level, pos, null, player, heldStack);
+                SoundType soundtype = state.getSoundType(level, pos, player);
+                level.playSound(null, pos, soundtype.getPlaceSound(), SoundSource.BLOCKS,
+                        (soundtype.getVolume() + 1.0F) / 2.0F,
+                        soundtype.getPitch() * 0.8F);
 
-            SoundType soundtype = state.getSoundType(level, pos, player);
-            level.playSound(null, pos, soundtype.getPlaceSound(), SoundSource.BLOCKS,
-                    (soundtype.getVolume() + 1.0F) / 2.0F,
-                    soundtype.getPitch() * 0.8F);
+                level.setBlock(pos, budState, 3);
+                ParticleUtils.spawnParticles(level, pos, 10, 1.0, 1.0, true, ParticleTypes.HAPPY_VILLAGER);
+                player.swing(InteractionHand.MAIN_HAND, true);
 
-            level.setBlock(pos, budState, 3);
-            ParticleUtils.spawnParticles(level, pos, 10, 1.0, 1.0, true, ParticleTypes.HAPPY_VILLAGER);
-            player.swing(InteractionHand.MAIN_HAND, true);
+                return true;
+            }
         }
+        return false;
     }
 
     public static ResourceLocation id(String path) {
