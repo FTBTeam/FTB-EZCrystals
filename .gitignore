@@ -21,5 +21,10 @@ logs
 # other
 eclipse
 run
+run-data
 .vscode
 runs
+
+repo
+.DS_Store
+src/generated/resources/.cache
