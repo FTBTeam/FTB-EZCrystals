@@ -1,6 +1,19 @@
 # FTB EZ Crystals
 
-Use https://github.com/FTBTeam/FTB-Mods-Issues for any mod issues
+Simplify your crystal harvesting.
+
+FTB Ez Crystals lets you right-click to harvest fully grown budding crystals without breaking the block. After harvesting, the crystal resets to its first growth stage.
+
+### Key Features
+
+*   Right-click harvesting of fully grown budding crystals.,
+*   Empty-hand harvesting yields 2 shards.
+*   Harvesting with a pickaxe yields 4 or more shards, scaling with Fortune.
+*   Compatible with vanilla amethyst, Applied Energistics 2 crystals, geOre crystals, and more.
+*   Datapack support for adding additional budding crystal variants.
+*   FTB Ultimine integration allows mass harvesting of crystals.
+
+Whether you're automating resource gathering or just tired of breaking every cluster manually, FTB Ez Crystals makes it fast, intuitive, and efficient.
 
 ## Support
 
