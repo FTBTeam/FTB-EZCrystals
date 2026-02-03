@@ -185,7 +185,7 @@ def getMinorAndPatchFromMc() {
 publishMods {
     dryRun = providers.environmentVariable("CURSEFORGE_KEY").getOrNull() == null
     changelog = createChangelog(project)
-    version = mod_version
+    version = project.version
 
     def tag = providers.environmentVariable("TAG").getOrElse("release")
     type = tag.endsWith("-beta") ? BETA : (tag.endsWith("-alpha") ? ALPHA : STABLE)
