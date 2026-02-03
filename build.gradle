@@ -183,21 +183,21 @@ def getMinorAndPatchFromMc() {
 }
 
 publishMods {
-    dryRun = providers.environmentVariable("CURSEFORGE_KEY").getOrNull() == null
+    dryRun = !providers.environmentVariable("CURSEFORGE_KEY").isPresent()
+    displayName = "${mod_name} ${project.version}"
     changelog = createChangelog(project)
-    version = mod_version
+    version = project.version
+    file = jar.archiveFile
+    modLoaders.add("forge")
 
     def tag = providers.environmentVariable("TAG").getOrElse("release")
     type = tag.endsWith("-beta") ? BETA : (tag.endsWith("-alpha") ? ALPHA : STABLE)
 
     curseforge {
-        displayName = "${mod_name} ${mod_version}"
-        file = project.provider { tasks.jar }.flatMap { it.archiveFile }
         projectId = curseforge_id
         accessToken = providers.environmentVariable("CURSEFORGE_KEY")
         minecraftVersions.add("${minecraft_version}")
         javaVersions.add(JavaVersion.VERSION_17)
-        modLoaders.add("forge")
 
         optional('geore')
         optional('applied-energistics-2')
