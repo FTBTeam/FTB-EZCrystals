@@ -184,7 +184,7 @@ def getMinorAndPatchFromMc() {
 
 publishMods {
     dryRun = !providers.environmentVariable("CURSEFORGE_KEY").isPresent()
-    displayName = "${mod_name} ${mod_version}"
+    displayName = "${mod_name} ${project.version}"
     changelog = createChangelog(project)
     version = project.version
     file = jar.archiveFile
