@@ -187,7 +187,7 @@ publishMods {
     displayName = "${mod_name} ${project.version}"
     changelog = createChangelog(project)
     version = project.version
-    file = jar.archiveFile
+    file = reobfJar.archiveFile
     modLoaders.add("forge")
 
     def tag = providers.environmentVariable("TAG").getOrElse("release")
