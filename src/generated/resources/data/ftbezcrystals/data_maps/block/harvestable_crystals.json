@@ -1,18 +1,15 @@
 {
   "values": {
-    "ae2:quartz_cluster": {
+    "geore:allthemodium_cluster": {
       "neoforge:conditions": [
         {
           "type": "neoforge:mod_loaded",
-          "modid": "ae2"
+          "modid": "geore"
         }
       ],
-      "bud": "ae2:small_quartz_bud",
+      "bud": "geore:small_allthemodium_bud",
       "budding_block": [
-        "ae2:chipped_budding_quartz",
-        "ae2:damaged_budding_quartz",
-        "ae2:flawed_budding_quartz",
-        "ae2:flawless_budding_quartz"
+        "geore:budding_allthemodium"
       ]
     },
     "geore:aluminum_cluster": {
@@ -291,6 +288,18 @@
         "geore:budding_tungsten"
       ]
     },
+    "geore:unobtainium_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_unobtainium_bud",
+      "budding_block": [
+        "geore:budding_unobtainium"
+      ]
+    },
     "geore:uraninite_cluster": {
       "neoforge:conditions": [
         {
@@ -313,6 +322,18 @@
       "bud": "geore:small_uranium_bud",
       "budding_block": [
         "geore:budding_uranium"
+      ]
+    },
+    "geore:vibranium_cluster": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "geore"
+        }
+      ],
+      "bud": "geore:small_vibranium_bud",
+      "budding_block": [
+        "geore:budding_vibranium"
       ]
     },
     "geore:zinc_cluster": {

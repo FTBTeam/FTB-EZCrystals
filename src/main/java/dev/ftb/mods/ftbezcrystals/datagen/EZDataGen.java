@@ -10,17 +10,15 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = FTBEZCrystals.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = FTBEZCrystals.MOD_ID)
 public class EZDataGen {
 
     @SubscribeEvent
-    public static void dataGenEvent(GatherDataEvent event) {
+    public static void dataGenEvent(GatherDataEvent.Server event) {
         DataGenerator gen = event.getGenerator();
         PackOutput output = gen.getPackOutput();
         CompletableFuture<Provider> lookupProvider = event.getLookupProvider();
 
-        if (event.includeServer()) {
-            gen.addProvider(true, new ModDataMapProvider(output, lookupProvider));
-        }
+        gen.addProvider(true, new ModDataMapProvider(output, lookupProvider));
     }
 }

@@ -1,6 +1,5 @@
 package dev.ftb.mods.ftbezcrystals.datagen;
 
-import appeng.core.definitions.AEBlocks;
 import com.shynieke.geore.registry.GeOreBlockReg;
 import com.shynieke.geore.registry.GeOreRegistry;
 import dev.ftb.mods.ftbezcrystals.datamap.EZDataMaps;
@@ -13,7 +12,6 @@ import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModDataMapProvider extends DataMapProvider {
@@ -29,10 +27,11 @@ public class ModDataMapProvider extends DataMapProvider {
 
         addGeOres(crystals);
 
-        crystals.add(AEBlocks.QUARTZ_CLUSTER.block().builtInRegistryHolder(), new HarvestableCrystal(AEBlocks.SMALL_QUARTZ_BUD.block(),
-                        List.of(AEBlocks.CHIPPED_BUDDING_QUARTZ.block(), AEBlocks.DAMAGED_BUDDING_QUARTZ.block(),
-                                AEBlocks.FLAWED_BUDDING_QUARTZ.block(), AEBlocks.FLAWLESS_BUDDING_QUARTZ.block())),
-                false, new ModLoadedCondition("ae2"));
+        // TODO uncomment when we port to 26.1 - no AE2 on 1.21.11
+//        crystals.add(AEBlocks.QUARTZ_CLUSTER.block().builtInRegistryHolder(), new HarvestableCrystal(AEBlocks.SMALL_QUARTZ_BUD.block(),
+//                        List.of(AEBlocks.CHIPPED_BUDDING_QUARTZ.block(), AEBlocks.DAMAGED_BUDDING_QUARTZ.block(),
+//                                AEBlocks.FLAWED_BUDDING_QUARTZ.block(), AEBlocks.FLAWLESS_BUDDING_QUARTZ.block())),
+//                false, new ModLoadedCondition("ae2"));
     }
 
     private void addGeOres(Builder<HarvestableCrystal, Block> crystals) {
