@@ -22,7 +22,7 @@ base {
 apply from: 'https://raw.githubusercontent.com/FTBTeam/mods-meta/main/gradle/changelog.gradle'
 apply from: "https://raw.githubusercontent.com/FTBTeam/mods-meta/main/gradle/publishing.gradle"
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 neoForge {
 	version = "${mcMinorAndPatch}.${neo_version}"
@@ -88,11 +88,12 @@ repositories {
 	}
 
 	maven {
-		url = "https://maven.architectury.dev"
+		url = "https://maven.ftb.dev/snapshots"
 		content {
-			includeGroup("dev.architectury")
+			includeGroup("dev.ftb.mods")
 		}
 	}
+
 
 	maven {
 		url "https://maven.saps.dev/minecraft"
@@ -111,7 +112,7 @@ repositories {
 
 dependencies {
 	compileOnly("com.shynieke.geore:GeOre-${geore_minecraft}:${geore_version}")
-	localRuntime("com.shynieke.geore:GeOre-${geore_minecraft}:${geore_version}")
+	//localRuntime("com.shynieke.geore:GeOre-${geore_minecraft}:${geore_version}")
 
 	compileOnly "curse.maven:applied-energistics-2-223794:6488853"
 //	localRuntime "curse.maven:applied-energistics-2-223794:6488853"
@@ -176,7 +177,7 @@ idea {
 def getMinorAndPatchFromMc() {
 	String mcVersion = project.minecraft_version
 	String[] split = mcVersion.split("\\.")
-	return split[1] + "." + (split[2] ?: "0")
+	return split[0] + "." + split[1] + "." + (split.length > 2 ? split[2] : "0")
 }
 
 publishMods {
@@ -197,7 +198,7 @@ publishMods {
 		accessToken = CFToken.orElse("missing")
 		projectId = project.curseforge_id
 		minecraftVersions.add(project.minecraft_version)
-		javaVersions.add(JavaVersion.VERSION_21)
+		javaVersions.add(JavaVersion.VERSION_25)
 	}
 }
 
