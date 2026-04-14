@@ -25,8 +25,7 @@ public class ModDataMapProvider extends DataMapProvider {
         final Builder<HarvestableCrystal, Block> crystals = builder(EZDataMaps.HARVESTABLE_CRYSTALS);
         crystals.add(Blocks.AMETHYST_CLUSTER.builtInRegistryHolder(), new HarvestableCrystal(Blocks.SMALL_AMETHYST_BUD, Blocks.BUDDING_AMETHYST), false);
 
-        // TODO uncomment when GeOres releases on 26.1
-//        addGeOres(crystals);
+        addGeOres(crystals);
 
         // TODO uncomment when we port to 26.1 - no AE2 on 1.21.11
 //        crystals.add(AEBlocks.QUARTZ_CLUSTER.block().builtInRegistryHolder(), new HarvestableCrystal(AEBlocks.SMALL_QUARTZ_BUD.block(),
